@@ -1,11 +1,11 @@
-LOAD DATA INTO `sales_dataset_dbt.customers`
+LOAD DATA INTO `elt-pipeline-465809.sales_dataset_dbt.customers`
 FROM FILES (
   format = 'CSV',
   uris = ['gs://dbt-bigquery-project/customers.csv'],
   skip_leading_rows = 1
 );
 
-LOAD DATA INTO `sales_dataset_dbt.products`
+LOAD DATA INTO `elt-pipeline-465809.sales_dataset_dbt.products`
 FROM FILES (
   format = 'CSV',
   uris = ['gs://dbt-bigquery-project/products.csv'],
@@ -13,7 +13,7 @@ FROM FILES (
 );
 
 
-LOAD DATA INTO `sales_dataset_dbt.sales`
+LOAD DATA INTO `elt-pipeline-465809.sales_dataset_dbt.sales`
 FROM FILES (
   format = 'CSV',
   uris = ['gs://dbt-bigquery-project/sales.csv'],

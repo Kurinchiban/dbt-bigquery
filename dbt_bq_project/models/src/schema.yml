@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: employee_dataset
+    database: elt-pipeline-465809
+    schema: sales_dataset_dbt 
+    tables:
+      - name: customers
+        columns:
+          - name: customer_id
+            tests:
+              - unique
+              - not_null
+          - name: first_name
+            tests:
+              - not_null
+          - name: last_name
+          - name: email
+            tests:
+              - not_null
+          - name: signup_date
+      - name: products
+      - name: sales
