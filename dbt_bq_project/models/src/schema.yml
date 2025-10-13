@@ -4,7 +4,7 @@ sources:
   - name: employee_dataset
     database: stoked-brand-474706-u8
 
-    schema: sales_dataset_dbt_bq 
+    schema: sales_dataset_bq_dbt
     tables:
       - name: customers
         columns:
