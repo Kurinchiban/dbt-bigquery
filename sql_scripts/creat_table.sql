@@ -1,4 +1,4 @@
-create table sales_dataset_dbt.customers
+create table sales_dataset_bq_dbt.customers
 (
   customer_id int64,
   first_name string,
@@ -10,7 +10,7 @@ partition by signup_date
 cluster by last_name;
 
 
-create table sales_dataset_dbt.products
+create table sales_dataset_bq_dbt.products
 (
   product_id int64,
   product_name string,
@@ -20,7 +20,7 @@ create table sales_dataset_dbt.products
 cluster by category;
 
 
-create table sales_dataset_dbt.sales
+create table sales_dataset_bq_dbt.sales
 (
   sale_id int64,
   customer_id int64,

@@ -2,8 +2,9 @@ version: 2
 
 sources:
   - name: employee_dataset
-    database: elt-pipeline-465809
-    schema: sales_dataset_dbt 
+    database: stoked-brand-474706-u8
+
+    schema: sales_dataset_dbt_bq 
     tables:
       - name: customers
         columns:
