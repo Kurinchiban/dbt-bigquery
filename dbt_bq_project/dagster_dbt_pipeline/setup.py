@@ -1,11 +1,11 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="dbt_dagster",
+    name="dagster_dbt_pipeline",
     version="0.0.1",
     packages=find_packages(),
     package_data={
-        "dbt_dagster": [
+        "dagster_dbt_pipeline": [
             "dbt-project/**/*",
         ],
     },
@@ -14,6 +14,7 @@ setup(
         "dagster-cloud",
         "dagster-dbt",
         "dbt-core<1.11",
+        "dbt-bigquery<1.11",
         "dbt-bigquery<1.11",
     ],
     extras_require={
