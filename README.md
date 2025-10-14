@@ -30,6 +30,12 @@ dbt debug
 dbt run
 ```
 
+### To Run dbt in different environments:
+
+``` bash
+dbt run --target prod
+```
+
 ### Test dbt Project
 
 ``` bash
@@ -48,19 +54,14 @@ pip install dagster-dbt dagster-webserver
 ### Create Dagster Folder
 
 ``` bash
-dagster-dbt project scaffold --project-name dbt_dagster --dbt-project-dir=dbt_bq_project
+cd dbt_bq_project
+dagster-dbt project scaffold --project-name dagster_dbt_pipeline
 ```
 
-### Configure `profiles.yml`
-
-``` python
-profiles_dir=Path.home().joinpath(".dbt").resolve()
-```
-- Add the above code in dbt_dagster_project.py to allow Dagster to identify the profiles.yml file.
-
-### Run Dagster
+### Run Dagster in Local
 
 ``` bash
+cd dagster_dbt_pipeline
 dagster dev
 ```
 
